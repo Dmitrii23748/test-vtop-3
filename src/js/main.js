@@ -1,7 +1,35 @@
+import { validateElem, deleteCrash } from "./module/form.js";
+
+const body = document.querySelector("body");
+const form = document.querySelector(".form");
+const formRegistr = document.querySelector(".form-registr");
+const formBtn = document.querySelector(".form-btn");
+const shapeImg = document.querySelectorAll(".shape-img");
+
+const firstName = document.getElementById("input-name");
+const lastName = document.getElementById("input-lastname");
+const nationality = document.getElementById("nationality");
+const email = document.getElementById("input-email");
 
 const yearSelect = document.getElementById("year");
 const monthSelect = document.getElementById("month");
 const daySelect = document.getElementById("day");
+
+const password = document.getElementById("input-pass");
+const passwordConf = document.getElementById("input-passwordconf");
+
+const state = {
+	firstName: "",
+	lastName: "",
+	nationality: "",
+	email: "",
+	dayBirth: "",
+	mounthBirth: "",
+	yearBirth: "",
+	gender: "",
+	password: "",
+	confirmPassword: "",
+};
 
 // Реализация выбора даты рождения
 const months = [
@@ -18,7 +46,6 @@ const months = [
 	"November",
 	"December",
 ];
-
 // Months are always the same
 (function populateMonths() {
 	for (let i = 0; i < months.length; i++) {
@@ -28,9 +55,7 @@ const months = [
 	}
 	monthSelect.value = "January";
 })();
-
 let previousDay;
-
 function populateDays(month) {
 	//Delete all of the children of the day dropdown
 	//if they do exist
@@ -41,7 +66,6 @@ function populateDays(month) {
 	let dayNum;
 	//Get the current year
 	let year = yearSelect.value;
-
 	if (
 		month === "January" ||
 		month === "March" ||
@@ -86,7 +110,6 @@ function populateDays(month) {
 		}
 	}
 }
-
 function populateYears() {
 	//Get the current year as a number
 	let year = new Date().getFullYear();
@@ -97,7 +120,6 @@ function populateYears() {
 		yearSelect.appendChild(option);
 	}
 }
-
 populateDays(monthSelect.value);
 populateYears();
 
@@ -111,3 +133,110 @@ daySelect.onchange = function () {
 	previousDay = daySelect.value;
 };
 // конец реализации даты рождения
+
+formBtn.addEventListener("click", () => {
+	setTimeout(() => {
+		deleteCrash(formBtn);
+	}, 100);
+});
+
+for (let elem of form.elements) {
+	let dataAtr = elem.dataset.element;
+	if (
+		!elem.classList.contains("select-item") &&
+		!elem.classList.contains("input-radio") &&
+		!elem.classList.contains("form-btn")
+	) {
+		elem.addEventListener("blur", () => {
+			validateElem(elem, shapeImg, dataAtr);
+			if (password.value !== passwordConf.value && passwordConf.value !== "") {
+				elem.nextElementSibling.textContent = "Пароли не равны";
+			}
+		});
+	}
+}
+
+body.addEventListener("input", (e) => {
+	if (e.target.name === "firstName") {
+		state.firstName = firstName.value;
+	}
+	if (e.target.name === "lastname") {
+		state.lastName = lastName.value;
+	}
+	if (e.target.name === "select-nationality") {
+		state.nationality = nationality.value;
+	}
+	if (e.target.name === "day") {
+		state.dayBirth = daySelect.value;
+	}
+	if (e.target.name === "month") {
+		state.mounthBirth = monthSelect.value;
+	}
+	if (e.target.name === "year") {
+		state.yearBirth = yearSelect.value;
+	}
+	if (e.target.name === "email") {
+		state.email = email.value;
+	}
+	if (e.target.name === "password") {
+		state.password = password.value;
+	}
+	if (e.target.name === "passconf") {
+		state.confirmPassword = passwordConf.value;
+	}
+});
+
+document.addEventListener("change", (e) => (state.gender = e.target.value));
+
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+
+	for (let elem of form.elements) {
+		let dataAtr = elem.dataset.element;
+		if (
+			!elem.classList.contains("select-item") &&
+			!elem.classList.contains("input-radio") &&
+			!elem.classList.contains("form-btn")
+		) {
+			if (elem.value === "") {
+				elem.nextElementSibling.textContent = "Заполните поле";
+				formBtn.classList.add("form-btn-crash");
+				shapeImg.forEach((shape) => {
+					if (shape.dataset.element === dataAtr) {
+						shape.classList.add("shape-img-none");
+						elem.classList.add("error-span-border");
+					}
+				});
+			} else if (
+				password.value !== passwordConf.value &&
+				passwordConf.value !== ""
+			) {
+				if (dataAtr === "input-pass" || dataAtr === "input-passconf") {
+					elem.nextElementSibling.textContent = "Пароли не равны";
+				}
+			} else if (elem.value !== "") {
+				validateElem(elem, shapeImg, dataAtr);
+			} else {
+				elem.nextElementSibling.textContent = "";
+				elem.classList.remove("error-span-border");
+			}
+		}
+	}
+
+	if (
+		state.firstName !== "" &&
+		state.lastName !== "" &&
+		state.nationality !== "" &&
+		state.email !== "" &&
+		state.dayBirth !== "" &&
+		state.mounthBirth !== "" &&
+		state.yearBirth !== "" &&
+		state.gender !== "" &&
+		state.password !== "" &&
+		state.confirmPassword !== ""
+	) {
+		console.log(state);
+		formRegistr.classList.remove("form-none");
+		form.classList.add("form-none");
+	}
+});

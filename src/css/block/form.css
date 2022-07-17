@@ -29,6 +29,7 @@
 }
 
 .form__input-item {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-width: 235px;
@@ -49,6 +50,7 @@
 }
 
 .input-item {
+	position: relative;
 	background-color: transparent;
 	outline: none;
 	border: none;
@@ -58,6 +60,8 @@
 .input-item:focus {
 	border-bottom: 2px solid #cec8c8;
 }
+
+
 
 .select-item {
 	cursor: pointer;
@@ -211,8 +215,69 @@
 	margin-left: 21px;
 }
 
-.form-none {
+.error-span {
+	color: #ff2222;
+	font-size: 10px;
+}
+
+.error-span-border {
+	border-bottom: 2px solid #ff2222;
+}
+
+.shape-img {
+	position: absolute;
+	top: 23px;
+	right: 0;
+}
+
+.shape-img-none {
 	display: none;
+}
+
+
+.form-none {
+	transition: .5s ease-in-out;
+	transform: scale(0);
+}
+
+.form-btn-crash {
+	animation: shake 0.5s;
+	animation-iteration-count: infinite;
+}
+@keyframes shake {
+	0% {
+		transform: translate(1px, 1px) rotate(0deg);
+	}
+	10% {
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		transform: translate(3px, 2px) rotate(0deg);
+	}
+	40% {
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		transform: translate(3px, 1px) rotate(-1deg);
+	}
+	80% {
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		transform: translate(1px, 2px) rotate(0deg);
+	}
+	100% {
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
 }
 
 @media (max-width: 700px) {
