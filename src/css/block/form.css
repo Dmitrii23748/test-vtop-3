@@ -1,0 +1,134 @@
+.form {
+	background-color: #ffffff;
+	padding: 39px 22px 33px;
+}
+.form__title {
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: -0.46px;
+	color: #111111;
+}
+
+.form__text {
+	line-height: 16px;
+	color: #111111;
+	margin-bottom: 20px;
+}
+
+.form__inputs {
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.form__input-item {
+	display: flex;
+	flex-direction: column;
+	min-width: 235px;
+	width: 100%;
+}
+
+.form__input-item:first-child {
+	margin-right: 13px;
+}
+
+.form__label-item {
+	font-size: 12px;
+	line-height: 14px;
+	color: #7c7c7c;
+}
+
+.input-item {
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #f2f2f2;
+	padding: 5px 10px 6px 0;
+}
+.input-item:focus {
+	border-bottom: 2px solid #cec8c8;
+}
+
+.select-item {
+	cursor: pointer;
+}
+
+.form__date-radio {
+	margin-bottom: 16px;
+	display: flex;
+}
+.form__inputs-date {
+	margin-right: 13px;
+}
+
+.form-radio__block {
+	margin-top: 13px;
+	display: flex;
+}
+
+.form__input-radio {
+	display: flex;
+	align-items: center;
+}
+.form__input-radio:first-child {
+	margin-right: 19px;
+}
+.form__label-gender {
+	line-height: 16px;
+	color: #111111;
+}
+.input-radio {
+	margin-right: 6px;
+}
+
+.form__label-gender,
+.input-radio {
+	cursor: pointer;
+}
+
+.form-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 98px;
+}
+
+.form-footer__text {
+	font-size: 13px;
+	line-height: 15px;
+	color: #000000;
+}
+.form-footer__text-link {
+	font-size: 13px;
+	line-height: 15px;
+	color: #5a61ed;
+	text-decoration: underline;
+	margin-left: 5px;
+}
+.form-footer__text-link:hover {
+	text-decoration: none;
+}
+
+.form-btn {
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	color: #ffffff;
+	background: #5a61ed;
+	border: 0.5px solid #ffffff;
+	padding: 7px 26px;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.form-btn:hover {
+	background: #080d5d;
+}
+
+@media (max-width: 700px) {
+	.form__inputs {
+		flex-wrap: wrap;
+	}
+	.form__date-radio {
+		flex-wrap: wrap;
+	}
+}

@@ -9,6 +9,136 @@
 	</head>
 	<body>
 		<!-- @@include('./chunk/header.html') -->
+
+		<section class="wrapper">
+			<div class="container">
+				<div class="form-block">
+					<div class="form-block__signup">
+						<h2 class="form-block__signup-title">Sign up</h2>
+					</div>
+					<form action="#" class="form-block__content form">
+						<h2 class="form__title">New user?</h2>
+						<p class="form__text">Use the form below to create your account.</p>
+
+						<div class="form__inputs">
+							<div class="form__input-item">
+								<label class="form__label-item" for="input-name"
+									>First Name
+								</label>
+								<input id="input-name" class="input-item" type="text" />
+							</div>
+
+							<div class="form__input-item">
+								<label class="form__label-item" for="input-lastname"
+									>Last Name</label
+								>
+								<input id="input-lastname" class="input-item" type="text" />
+							</div>
+						</div>
+
+						<div class="form__inputs">
+							<div class="form__input-item">
+								<span class="form__label-item">Nationality </span>
+								<select
+									id="nationality"
+									class="input-item select-item"
+									name="select-nationality"
+								>
+									<option value="America">Bobruisk</option>
+									<option value="America">America</option>
+									<option value="Belarus">Belarus</option>
+								</select>
+							</div>
+
+							<div class="form__input-item">
+								<label class="form__label-item" for="input-email">E-mail</label>
+								<input id="input-email" class="input-item" type="email" />
+							</div>
+						</div>
+
+						<div class="form__date-radio">
+							<div class="form__inputs-date">
+								<span class="form__label-item">Data of Birth </span>
+								<div class="form__date">
+									<select
+										id="day"
+										class="input-item select-item"
+										name="day"
+									></select>
+									<select
+										id="month"
+										class="input-item select-item"
+										name="month"
+									></select>
+									<select
+										id="year"
+										class="input-item select-item"
+										name="year"
+									></select>
+								</div>
+							</div>
+							<div class="form__inputs-radio">
+								<span class="form__label-item">Gender</span>
+								<div class="form-radio__block">
+									<div class="form__input-radio">
+										<input
+											class="input-radio"
+											id="input-male"
+											type="radio"
+											name="gender"
+										/>
+										<label class="form__label-gender" for="input-male"
+											>Male</label
+										>
+									</div>
+									<div class="form__input-radio">
+										<input
+											class="input-radio"
+											id="input-female"
+											type="radio"
+											name="gender"
+										/>
+										<label class="form__label-gender" for="input-female"
+											>Female</label
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form__inputs">
+							<div class="form__input-item">
+								<label class="form__label-item" for="input-password"
+									>Password
+								</label>
+								<input id="input-pass" class="input-item" type="password" />
+							</div>
+
+							<div class="form__input-item">
+								<label class="form__label-item" for="input-passwordconf"
+									>Confirm Password</label
+								>
+								<input
+									id="input-passwordconf"
+									class="input-item"
+									type="password"
+								/>
+							</div>
+						</div>
+
+						<div class="form-footer">
+							<span class="form-footer__text"
+								>Have an account?<a class="form-footer__text-link" href="#"
+									>Login</a
+								></span
+							>
+							<button class="form-btn" type="submit">Complete Signup</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
 		<!-- @@include('./chunk/footer.html') -->
 
 		<script src="js/main.js"></script>

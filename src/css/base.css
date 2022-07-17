@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans&display=swap");
+
+/* font-family: 'PT Sans', sans-serif; */
 
 html {
 	-webkit-box-sizing: border-box;
@@ -40,6 +43,11 @@ button {
 	margin: 0;
 	font-size: inherit;
 }
+body {
+	font-family: "Work Sans", sans-serif;
+	font-size: 14px;
+	background-color: #F2F2F2;
+}
 
 ul[class] {
 	list-style: none;
@@ -72,6 +80,39 @@ a {
 	text-decoration: none;
 }
 
+.wrapper {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+ max-width: 666px;
+ margin: 0 auto;
+ padding: 10px;
+}
+.form-block {
+	display: flex;
+}
 
+.form-block__signup {
+	position: relative;
+	min-width: 138px;
+	background-color: #5a61ed;
+}
 
+.form-block__signup-title {
+	position: absolute;
+	bottom: 70px;
+	right: -42px;
+	font-family: "PT Sans";
+	font-weight: 400;
+	font-size: 49px;
+	line-height: 63px;
+	color: #ffffff;
+	transform: rotate(-90deg);
+	width: 162px;
+}
 
+/* Form */
+@import "./block/form.css";
