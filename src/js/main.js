@@ -4,6 +4,7 @@ const body = document.querySelector("body");
 const form = document.querySelector(".form");
 const formRegistr = document.querySelector(".form-registr");
 const formBtn = document.querySelector(".form-btn");
+const formNone = document.querySelector(".form-none");
 const shapeImg = document.querySelectorAll(".shape-img");
 
 const firstName = document.getElementById("input-name");
@@ -234,9 +235,11 @@ form.addEventListener("submit", (e) => {
 		state.gender !== "" &&
 		state.password !== "" &&
 		state.confirmPassword !== ""
+		&& (state.password === state.confirmPassword)
 	) {
 		console.log(state);
-		formRegistr.classList.remove("form-none");
-		form.classList.add("form-none");
+		form.classList.add("form-class");
+		formRegistr.classList.add("form-registr-class");
+	
 	}
 });

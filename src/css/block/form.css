@@ -2,6 +2,8 @@
 	position: relative;
 	padding: 39px 22px 33px;
 	background-color: #ffffff;
+	transform: scale(1);
+	transition: .5s ease-in-out;
 }
 
 .form__title {
@@ -189,7 +191,9 @@
 }
 
 .form-registr {
+	transition: .5s ease-in-out;
 	background-color: #ffffff;
+	transform: scale(0);
 }
 .form-registr__content {
 	padding: 217px 351px 152px 64px;
@@ -235,9 +239,17 @@
 }
 
 
-.form-none {
+.form-class {
 	transition: .5s ease-in-out;
 	transform: scale(0);
+	width: 0;
+	height: 0;
+	padding: 0;
+}
+
+.form-registr-class {
+	transition: .5s ease-in-out;
+	transform: scale(1);
 }
 
 .form-btn-crash {

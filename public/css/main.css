@@ -147,6 +147,12 @@ a {
   position: relative;
   padding: 39px 22px 33px;
   background-color: #ffffff;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
 .form__title {
@@ -369,7 +375,13 @@ a {
 }
 
 .form-registr {
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   background-color: #ffffff;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .form-registr__content {
@@ -415,13 +427,25 @@ a {
   display: none;
 }
 
-.form-none {
+.form-class {
   -webkit-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+.form-registr-class {
+  -webkit-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .form-btn-crash {
