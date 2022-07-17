@@ -19,6 +19,10 @@ const daySelect = document.getElementById("day");
 const password = document.getElementById("input-pass");
 const passwordConf = document.getElementById("input-passwordconf");
 
+const formInputItem = document.querySelectorAll(".form__input-item");
+const formInputsRadio = document.querySelector(".form__inputs-radio");
+const formInputsDate = document.querySelector(".form__inputs-date");
+
 const state = {
 	firstName: "",
 	lastName: "",
@@ -31,6 +35,15 @@ const state = {
 	password: "",
 	confirmPassword: "",
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+	formInputItem.forEach((item) => {
+		item.classList.add("input-item-show");
+	});
+
+	formInputsRadio.classList.add("input-item-show");
+	formInputsDate.classList.add("input-item-show");
+});
 
 // Реализация выбора даты рождения
 const months = [
@@ -234,12 +247,11 @@ form.addEventListener("submit", (e) => {
 		state.yearBirth !== "" &&
 		state.gender !== "" &&
 		state.password !== "" &&
-		state.confirmPassword !== ""
-		&& (state.password === state.confirmPassword)
+		state.confirmPassword !== "" &&
+		state.password === state.confirmPassword
 	) {
 		console.log(state);
 		form.classList.add("form-class");
 		formRegistr.classList.add("form-registr-class");
-	
 	}
 });

@@ -150,9 +150,9 @@ a {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .form__title {
@@ -192,6 +192,44 @@ a {
   flex-direction: column;
   min-width: 235px;
   width: 100%;
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform: translateY(160px);
+  -ms-transform: translateY(160px);
+  transform: translateY(160px);
+  -webkit-filter: opacity(0);
+  filter: opacity(0);
+}
+
+.form__inputs-radio {
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform: translateY(160px);
+  -ms-transform: translateY(160px);
+  transform: translateY(160px);
+  -webkit-filter: opacity(0);
+  filter: opacity(0);
+}
+
+.form__inputs-date {
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform: translateY(160px);
+  -ms-transform: translateY(160px);
+  transform: translateY(160px);
+  -webkit-filter: opacity(0);
+  filter: opacity(0);
+}
+
+.input-item-show {
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-filter: opacity(1);
+  filter: opacity(1);
 }
 
 .form__input-item:first-child {
@@ -375,9 +413,9 @@ a {
 }
 
 .form-registr {
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   background-color: #ffffff;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -428,9 +466,9 @@ a {
 }
 
 .form-class {
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -440,9 +478,9 @@ a {
 }
 
 .form-registr-class {
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
