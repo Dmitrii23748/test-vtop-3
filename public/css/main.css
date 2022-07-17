@@ -61,7 +61,7 @@ button {
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 14px;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 ul[class] {
@@ -128,8 +128,8 @@ a {
 
 .form-block__signup-title {
   position: absolute;
-  bottom: 70px;
-  right: -42px;
+  bottom: 74px;
+  right: -46px;
   font-family: "PT Sans";
   font-weight: 400;
   font-size: 49px;
@@ -144,8 +144,9 @@ a {
 /* Form */
 
 .form {
-  background-color: #ffffff;
+  position: relative;
   padding: 39px 22px 33px;
+  background-color: #ffffff;
 }
 
 .form__title {
@@ -159,13 +160,19 @@ a {
   line-height: 16px;
   color: #111111;
   margin-bottom: 20px;
+  word-spacing: -2px;
 }
 
 .form__inputs {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+}
+
+.form__inputs_email {
+  margin-bottom: 13px;
 }
 
 .form__input-item {
@@ -190,7 +197,12 @@ a {
   color: #7c7c7c;
 }
 
+.form__label-item_gender {
+  margin-left: -3px;
+}
+
 .input-item {
+  background-color: transparent;
   outline: none;
   border: none;
   border-bottom: 1px solid #f2f2f2;
@@ -205,11 +217,23 @@ a {
   cursor: pointer;
 }
 
+.select-item_day {
+  width: 61px;
+}
+
+.select-item_mouth {
+  width: 98px;
+}
+
+.select-item_year {
+  width: 71px;
+}
+
 .form__date-radio {
-  margin-bottom: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 16px;
 }
 
 .form__inputs-date {
@@ -217,13 +241,20 @@ a {
 }
 
 .form-radio__block {
-  margin-top: 13px;
+  margin-top: 5px;
+  margin-left: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.form__input-radio {
+.form__date-radio,
+.form__inputs {
+  position: relative;
+  z-index: 2;
+}
+
+.form__label-gender {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,11 +273,39 @@ a {
 }
 
 .input-radio {
-  margin-right: 6px;
+  display: none;
 }
 
-.form__label-gender,
-.input-radio {
+.custom-radio {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border: 0.7px solid #5a61ed;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  width: 6px;
+  height: 6px;
+  display: block;
+  background-color: #5a61ed;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.input-radio:checked + .custom-radio::after {
+  opacity: 1;
+}
+
+.form__label-gender {
   cursor: pointer;
 }
 
@@ -260,7 +319,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 98px;
+  margin-top: 95px;
 }
 
 .form-footer__text {
@@ -274,7 +333,6 @@ a {
   line-height: 15px;
   color: #5a61ed;
   text-decoration: underline;
-  margin-left: 5px;
 }
 
 .form-footer__text-link:hover {
@@ -289,15 +347,55 @@ a {
   color: #ffffff;
   background: #5a61ed;
   border: 0.5px solid #ffffff;
-  padding: 7px 26px;
+  padding: 7px 24px;
   cursor: pointer;
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .form-btn:hover {
   background: #080d5d;
+}
+
+.form-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.form-registr {
+  background-color: #ffffff;
+}
+
+.form-registr__content {
+  padding: 217px 351px 152px 64px;
+}
+
+.form-registr__title {
+  width: 115px;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.46px;
+  color: #111111;
+  margin-bottom: 11px;
+}
+
+.form-registr__text {
+  line-height: 16px;
+  color: #111111;
+}
+
+.form-registr__link {
+  display: inline-block;
+  margin-bottom: 44px;
+  margin-left: 21px;
+}
+
+.form-none {
+  display: none;
 }
 
 @supports (-webkit-appearance:none) {

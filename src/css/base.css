@@ -46,7 +46,7 @@ button {
 body {
 	font-family: "Work Sans", sans-serif;
 	font-size: 14px;
-	background-color: #F2F2F2;
+	background-color: #f2f2f2;
 }
 
 ul[class] {
@@ -87,9 +87,9 @@ a {
 	align-items: center;
 }
 .container {
- max-width: 666px;
- margin: 0 auto;
- padding: 10px;
+	max-width: 666px;
+	margin: 0 auto;
+	padding: 10px;
 }
 .form-block {
 	display: flex;
@@ -103,8 +103,8 @@ a {
 
 .form-block__signup-title {
 	position: absolute;
-	bottom: 70px;
-	right: -42px;
+	bottom: 74px;
+	right: -46px;
 	font-family: "PT Sans";
 	font-weight: 400;
 	font-size: 49px;
@@ -113,6 +113,8 @@ a {
 	transform: rotate(-90deg);
 	width: 162px;
 }
+
+
 
 /* Form */
 @import "./block/form.css";
