@@ -78,6 +78,10 @@
 	border: none;
 	border-bottom: 1px solid #f2f2f2;
 	padding: 5px 10px 6px 0;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .input-item:focus {
@@ -258,7 +262,7 @@
 }
 
 .form-class {
-	transition: 0.5s ease-in-out;
+	transition: 1s ease-in-out;
 	transform: scale(0);
 	width: 0;
 	height: 0;
@@ -266,7 +270,7 @@
 }
 
 .form-registr-class {
-	transition: 0.5s ease-in-out;
+	transition: 1s ease-in-out;
 	transform: scale(1);
 }
 

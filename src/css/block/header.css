@@ -12,5 +12,6 @@
 	.text {
 		text-decoration: line-through;
 		color: rgb(255, 0, 0);
+		/* color: #cfc7c7; */
 	}
 }

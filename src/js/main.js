@@ -4,7 +4,6 @@ const body = document.querySelector("body");
 const form = document.querySelector(".form");
 const formRegistr = document.querySelector(".form-registr");
 const formBtn = document.querySelector(".form-btn");
-const formNone = document.querySelector(".form-none");
 const shapeImg = document.querySelectorAll(".shape-img");
 
 const firstName = document.getElementById("input-name");
@@ -36,6 +35,8 @@ const state = {
 	confirmPassword: "",
 };
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
 	formInputItem.forEach((item) => {
 		item.classList.add("input-item-show");
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	formInputsRadio.classList.add("input-item-show");
 	formInputsDate.classList.add("input-item-show");
 });
+
 
 // Реализация выбора даты рождения
 const months = [
@@ -253,5 +255,19 @@ form.addEventListener("submit", (e) => {
 		console.log(state);
 		form.classList.add("form-class");
 		formRegistr.classList.add("form-registr-class");
+		firstName.value = "";
+		lastName.value = "";
+		email.value = "";
+		yearSelect.value = "";
+		monthSelect.value = "";
+		daySelect.value = "";
+		password.value = "";
+		passwordConf.value = "";
 	}
+});
+
+// анимация svg
+const icon = new Vivus("my-svg", {
+	type: "sync",
+	duration: 300,
 });
