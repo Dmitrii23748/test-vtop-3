@@ -96,7 +96,6 @@ a {
 }
 
 .wrapper {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,6 +375,9 @@ a {
   font-size: 13px;
   line-height: 15px;
   color: #000000;
+  position: relative;
+  z-index: 4;
+  margin-right: 10px;
 }
 
 .form-footer__text-link {
@@ -402,6 +404,8 @@ a {
   -webkit-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  position: relative;
+  z-index: 4;
 }
 
 .form-btn:hover {
@@ -424,6 +428,8 @@ a {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+  width: 0;
+  height: 0;
 }
 
 .form-registr__content {
@@ -470,9 +476,9 @@ a {
 }
 
 .form-class {
-  -webkit-transition: 1s ease-in-out;
-  -o-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -488,6 +494,8 @@ a {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  width: 100%;
+  height: 100%;
 }
 
 .form-btn-crash {
@@ -621,9 +629,85 @@ a {
     flex-wrap: wrap;
   }
 
+  .input-item__firstName,
+  .form__input-item_nat,
+  .form__input-item_pass {
+    margin-bottom: 15px;
+  }
+
   .form__date-radio {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  .form-registr__content {
+    padding: 217px 180px 152px 64px;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 590px) {
+  .form__inputs-date {
+    margin-bottom: 15px;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 520px) {
+  .form-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .form-block__signup {
+    width: 100%;
+    height: 100px;
+  }
+
+  .form-block__signup-title {
+    bottom: 0;
+    left: 24px;
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
+    font-size: 27px;
+  }
+
+  .form-footer {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .form-btn {
+    margin-top: 20px;
+  }
+
+  .form-block__signup {
+    position: relative;
+    z-index: 4;
+  }
+
+  .form-img {
+    width: 200px;
+    height: 255px;
+  }
+
+@supports (-webkit-appearance:none) {
+
+}
+}
+
+@media (max-width: 380px) {
+  .form-registr__content {
+    padding: 100px 80px 100px 64px;
   }
 
 @supports (-webkit-appearance:none) {
